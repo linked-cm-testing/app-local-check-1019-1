@@ -1,0 +1,16 @@
+import {linkedPackage} from '@_linked/core/utils/Package';
+
+// `linkedComponent` is deliberately not destructured here: it is not part of core's
+// `LinkedPackageObject`. Component binding lives in `@_linked/react` — import
+// `linkedComponent` from `@_linked/react/utils/LinkedComponent` in a package that needs it,
+// so a package with no UI does not depend on React to declare its shapes.
+export const {
+  linkedShape,
+  linkedUtil,
+  linkedOntology,
+  registerPackageExport,
+  packageExports,
+  packageName,
+  getPackageShape
+
+} = linkedPackage('local-check-1019-1-assets', {baseUri: "https://local-check-1019.id.create.now/"});
